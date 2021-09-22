@@ -81,8 +81,8 @@ public class ViewReplace extends JFrame implements ActionListener {
         this.panel.add(inputReplaceRuleRightTxt);
         //设置默认规则
         //需求规则
-        inputNeedRuleLeftTxt.setText("name: '");
-        inputNeedRuleRightTxt.setText("'");
+        inputNeedRuleLeftTxt.setText("model.");
+        inputNeedRuleRightTxt.setText("`");
         //替换规则
         inputReplaceRuleLeftTxt.setText("name: '");
         inputReplaceRuleRightTxt.setText("'");

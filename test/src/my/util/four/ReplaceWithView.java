@@ -34,12 +34,13 @@ public class ReplaceWithView {
         Matcher matcher1 = pattern1.matcher(replaceTxt);
         int i = 0;
         StringBuffer stringBuffer = new StringBuffer();
-
-        while (matcher1.find() && i < list.size()) {
+        while (matcher1.find() && i <= list.size()) {
             //依次替换
-            matcher1.appendReplacement(stringBuffer,list.get(i));
+            matcher1.appendReplacement(stringBuffer, list.get(i));
             i++;
         }
+        //bug点，无法显示最后一个匹配项之后的内容*（已解决）
+        matcher1.appendTail(stringBuffer);
         return new String(stringBuffer);
     }
 }
