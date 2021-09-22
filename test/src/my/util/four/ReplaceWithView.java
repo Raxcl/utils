@@ -34,7 +34,7 @@ public class ReplaceWithView {
         Matcher matcher1 = pattern1.matcher(replaceTxt);
         int i = 0;
         StringBuffer stringBuffer = new StringBuffer();
-        while (matcher1.find() && i <= list.size()) {
+        while (matcher1.find() && i < list.size()) {
             //依次替换
             matcher1.appendReplacement(stringBuffer, list.get(i));
             i++;
